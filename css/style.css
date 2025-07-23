@@ -1,0 +1,120 @@
+:root {
+  --white-100: hsl(0, 100%, 100%);
+  --purple-100: hsl(275, 100%, 97%);
+  --purple-600: hsl(292, 16%, 49%);
+  --purple-950: hsl(292, 42%, 14%);
+}
+
+@font-face {
+    font-family: Work Sans;
+    src: url(/assets/fonts/WorkSans-VariableFont_wght.ttf);
+  }
+
+@font-face {
+    font-family: Work Sans Italic;
+    src: url(/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf);
+  }
+  
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    background-image: url(/assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: var(--purple-100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    font-family: "Work Sans";
+}
+
+.faq-card {
+    max-width: 540px;
+    margin-top: auto;
+    background-color: var(--white-100);
+    border-radius: 10px;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-title-image {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.4rem;
+}
+
+.faq-title-image img {
+    margin-right: 1.4rem;
+    width: 42px;
+}
+
+.faq-title-image span {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.accordion {
+    background-color: var(--white-100);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 18px 4px;
+    text-align: left;
+    border:none;
+    width: 100%;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.panel {
+    padding: 0px 4px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+.panel p {
+    padding: 18px 0px;
+}
+
+.panel.show {
+    max-height: 200px;
+}
+
+hr {
+    border-top: 1px solid var(--purple-100);
+}
+
+.accordion::after {
+    content: url(/assets/images/icon-plus.svg);
+}
+
+.active::after {
+    content: url(/assets/images/icon-minus.svg);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: auto;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+    body {
+        background-image: url(/assets/images/background-pattern-mobile.svg);
+    }
+}
