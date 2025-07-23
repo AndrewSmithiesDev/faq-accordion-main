@@ -7,12 +7,12 @@
 
 @font-face {
     font-family: Work Sans;
-    src: url(/assets/fonts/WorkSans-VariableFont_wght.ttf);
+    src: url(../assets/fonts/WorkSans-VariableFont_wght.ttf);
   }
 
 @font-face {
     font-family: Work Sans Italic;
-    src: url(/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf);
+    src: url(../assets/fonts/WorkSans-Italic-VariableFont_wght.ttf);
   }
   
 
@@ -23,7 +23,7 @@
   }
 
 body {
-    background-image: url(/assets/images/background-pattern-desktop.svg);
+    background-image: url(../assets/images/background-pattern-desktop.svg);
     background-repeat: no-repeat;
     background-color: var(--purple-100);
     display: flex;
@@ -97,11 +97,11 @@ hr {
 }
 
 .accordion::after {
-    content: url(/assets/images/icon-plus.svg);
+    content: url(../assets/images/icon-plus.svg);
 }
 
 .active::after {
-    content: url(/assets/images/icon-minus.svg);
+    content: url(../assets/images/icon-minus.svg);
 }
 
 .attribution {
@@ -115,6 +115,6 @@ hr {
 
 @media (max-width: 375px) {
     body {
-        background-image: url(/assets/images/background-pattern-mobile.svg);
+        background-image: url(../assets/images/background-pattern-mobile.svg);
     }
 }
